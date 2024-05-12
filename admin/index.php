@@ -4,6 +4,14 @@ include "../header.php";
 
 ?>
 
+<?php 
+session_start();
+if (isset($_SESSION['admin_id']) && 
+    isset($_SESSION['role'])) {
+
+    if ($_SESSION['role'] == 'Admin') {
+ ?>
+
 <body>
 <?php
 
@@ -63,5 +71,18 @@ include "../nav.php";
 <?php
 
 include "../footer.php";
+
+?>
+
+<?php 
+
+  }else {
+    header("Location: ../login.php");
+    exit;
+  } 
+}else {
+	header("Location: ../login.php");
+	exit;
+} 
 
 ?>
