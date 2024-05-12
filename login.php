@@ -5,15 +5,20 @@ include "./header.php";
 ?>
 
 <body>
-    <h2>JIET Login Form</h2>
-    <form methord="POST" action="api/login.php">
+    <h2>Login Form</h2>
+    <form method="POST" action="api/login.php">
+        <?php if (isset($_GET['error'])) { ?>
+    	    <div class="alert alert-danger" role="alert">
+	<?=$_GET['error']?>
+	    </div>
+	<?php } ?>
         <div class="mb-3">
             <label for="username">Username:</label><br>
-            <input type="text" class="form-control" id="username" name="username" required><br><br>
+            <input type="text" class="form-control" id="username" name="uname" required><br><br>
         </div>
         <div class="mb-3">
             <label for="password">Password:</label><br>
-            <input type="password" class="form-control" id="password" name="password" required><br><br>
+            <input type="password" class="form-control" id="password" name="pass" required><br><br>
         </div>
         <div class="mb-3">
             <label class="form-label">Login As</label>
@@ -24,7 +29,9 @@ include "./header.php";
                 <option value="4">Registrar Office</option>
             </select>
         </div>
-        <input type="submit" value="Login">
+        <button type="submit" class="btn btn-primary">Login</button>
+	<a href="index.php" class="text-decoration-none">Home</a>
+
     </form>
 </body>
 

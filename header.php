@@ -1,6 +1,6 @@
 <?php 
 include "db_connection.php";
-include "data/settings.php";
+include "api/settings.php";
 $setting = getSetting($conn);
 
 if ($setting == 0) {
