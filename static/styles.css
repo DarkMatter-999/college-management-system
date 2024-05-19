@@ -27,7 +27,7 @@ body {
 
 .textbox p {
   margin: 10px 0 40px;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
 }
 
@@ -41,9 +41,6 @@ nav {
   padding: 10px 20px;
   display: flex;
   align-items: center;
-}
-
-nav li {
   justify-content: space-between;
 }
 
@@ -56,6 +53,19 @@ nav a {
 nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+.login-button {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* Section styles */
@@ -63,26 +73,38 @@ section {
   padding: 20px;
 }
 
-h4 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
 #about {
-  background-color: #f9f9f9;
-  padding: 20px;
+  text-align: center;
+  padding: 40px;
+}
+
+#about p {
+  padding: 10px;
+}
+
+.row {
+  margin-top: 5%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
-#about div {
-  margin-right: 20px;
+.course-col {
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
 
-#about h5 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.course-col:hover {
+  box-shadow: 0 0 20px 0px rgb(0, 0, 0);
+}
+
+.imge {
+  width: 300px;
+  height: 300px;
 }
 
 #contact {
@@ -131,6 +153,37 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #333;
+}
+
+.content {
+  background-color: #333;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 .copy {
@@ -203,5 +256,8 @@ input[type="password"]:focus {
   }
   .textbox p {
     font-size: 12px;
+  }
+  .row {
+    flex-direction: column;
   }
 }
