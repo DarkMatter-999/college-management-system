@@ -5,20 +5,18 @@ include "./header.php";
 ?>
 
 <body>
-    <div>
-        <nav>
-            <a href="#">
-                <img src="./static/logo.png" width="40" alt="Logo">
-            </a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </nav>
-    </div>
-    <section style="min-height: 95vh;
+    <nav>
+        <a href="#">
+            <img src="./static/logo.png" width="40px" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="login.php" class="login-button">Login</a>
+    </nav>
+    <section style="min-height: 92vh;
                 width: 100%;
                 background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
                                   url('./static/uni.jpg');
@@ -28,20 +26,33 @@ include "./header.php";
         <div class="textbox">
             <img src="./static/logo.png" alt="Logo">
             <h1>Welcome to <?= $setting['school_name'] ?></h1>
+            <p> <?= $setting['slogan'] ?></p>
         </div>
     </section>
     <section id="about">
-        <div>
-            <img src="./static/logo.png" alt="Logo">
-        </div>
-        <div>
-            <h5>About Us</h5>
-            <p><?= $setting['about'] ?></p>
+        <h2>About Us</h2>
+        <p><?= $setting['about'] ?></p>
+        <div class="row">
+            <div class="course-col">
+                <h5>CSE</h5>
+                <img class="imge" src="./static/logo.png" alt="Logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, deleniti eaque omnis dolores molestiae enim harum! Placeat libero eum amet perferendis tempore. Ipsam soluta ut officiis atque laborum veritatis voluptatum!</p>
+            </div>
+            <div class="course-col">
+                <h5>ME</h5>
+                <img class="imge" src="./static/logo.png" alt="Logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, deleniti eaque omnis dolores molestiae enim harum! Placeat libero eum amet perferendis tempore. Ipsam soluta ut officiis atque laborum veritatis voluptatum!</p>
+            </div>
+            <div class="course-col">
+                <h5>EE</h5>
+                <img class="imge" src="./static/logo.png" alt="Logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, deleniti eaque omnis dolores molestiae enim harum! Placeat libero eum amet perferendis tempore. Ipsam soluta ut officiis atque laborum veritatis voluptatum!</p>
+            </div>
         </div>
     </section>
     <section id="contact" class="d-flex justify-content-center align-items-center flex-column">
         <form method="post" action="api/contact.php">
-            <h3>Contact Us</h3>
+            <h2>Contact Us</h2>
             <?php if (isset($_GET['error'])) { ?>
                 <div class="alert alert-danger" role="alert">
                     <?= $_GET['error'] ?>
@@ -68,11 +79,26 @@ include "./header.php";
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
     </section>
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="contact-info">
+                <p><strong><?= $setting['school_name'] ?></strong></p>
+                <p class="sqsrte-small">
+                    <?= $setting['school_name'] ?><br> Placeholder Address<br>
+                </p>
+                <p class="sqsrte-small">
+                    Phone Number: Placeholder No.
+                </p>
+                <p class="sqsrte-small">
+                    Email: <a href="">Placeholder Email</a>
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="copy">
         Copyright &copy; <?= date('Y') ?> <?= $setting['school_name'] ?>. All rights reserved.
     </div>
     </div>
-
 </body>
 
 <?php
