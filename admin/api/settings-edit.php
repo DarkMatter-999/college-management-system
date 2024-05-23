@@ -6,7 +6,7 @@ if (isset($_SESSION['admin_id']) &&
     if ($_SESSION['role'] == 'Admin') {
     	
 
-if (isset($_POST['school_name']) &&
+if (isset($_POST['college_name']) &&
     isset($_POST['slogan']) &&
     isset($_POST['about']) &&
     isset($_POST['current_year']) &&
@@ -14,7 +14,7 @@ if (isset($_POST['school_name']) &&
     
     include '../../db_connection.php';
 
-    $school_name = $_POST['school_name'];
+    $college_name = $_POST['college_name'];
     $slogan = $_POST['slogan'];
     $about = $_POST['about'];
     $current_year = $_POST['current_year'];
@@ -22,8 +22,8 @@ if (isset($_POST['school_name']) &&
 
    
 
-    if (empty($school_name)) {
-        $em  = "School name is required";
+    if (empty($college_name)) {
+        $em  = "College name is required";
         header("Location: ../settings.php?error=$em");
         exit;
     }else if (empty($slogan)) {
@@ -47,12 +47,12 @@ if (isset($_POST['school_name']) &&
         $sql  = "UPDATE setting 
                  SET current_year=?,
                      current_semester=?,
-                     school_name=?,
+                     college_name=?,
                      slogan=?,
                      about=?
                  WHERE id=?";
         $stmt = $conn->prepare($sql);
-        $stmt->execute([$current_year, $current_semester, $school_name, $slogan, $about, $id]);
+        $stmt->execute([$current_year, $current_semester, $college_name, $slogan, $about, $id]);
         $sm = "Settings updated successfully";
         header("Location: ../settings.php?success=$sm&$data");
         exit;

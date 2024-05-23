@@ -6,7 +6,7 @@ if (isset($_SESSION['admin_id']) &&
     if ($_SESSION['role'] == 'Admin') {
        include "../db_connection.php";
        include "data/student.php";
-       include "data/grade.php";
+       include "data/semester.php";
        $students = getAllStudents($conn);
  ?>
 
@@ -60,7 +60,7 @@ if (isset($_SESSION['admin_id']) &&
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
                     <th scope="col">Username</th>
-                    <th scope="col">Grade</th>
+                    <th scope="col">Semester</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
@@ -79,11 +79,11 @@ if (isset($_SESSION['admin_id']) &&
                     <td><?=$student['username']?></td>
                     <td>
                       <?php 
-                           $grade = $student['grade'];
+                           $grade = $student['semester'];
                            $g_temp = getGradeById($grade, $conn);
                            if ($g_temp != 0) {
-                              echo $g_temp['grade_code'].'-'.
-                                     $g_temp['grade'];
+                              echo $g_temp['semester_code'].'-'.
+                                     $g_temp['semester'];
                             }
                         ?>
                     </td>

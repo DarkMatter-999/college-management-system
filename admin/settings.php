@@ -32,11 +32,11 @@ include "../nav.php";
           </div>
         <?php } ?>
         <div class="mb-3">
-          <label class="form-label">School Name</label>
+          <label class="form-label">College Name</label>
           <input type="text" 
                  class="form-control"
-                 value="<?=$setting['school_name']?>" 
-                 name="school_name">
+                 value="<?=$setting['college_name']?>" 
+                 name="college_name">
         </div>
         <div class="mb-3">
           <label class="form-label">Slogan</label>

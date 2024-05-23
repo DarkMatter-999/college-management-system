@@ -1,13 +1,13 @@
 <?php 
-// All semester
+// All Grades
 function getAllGrades($conn){
    $sql = "SELECT * FROM semester";
    $stmt = $conn->prepare($sql);
    $stmt->execute();
 
    if ($stmt->rowCount() >= 1) {
-     $semester = $stmt->fetchAll();
-     return $semester;
+     $grades = $stmt->fetchAll();
+     return $grades;
    }else {
     return 0;
    }
@@ -31,7 +31,7 @@ function getGradeById($grade_id, $conn){
 // DELETE
 function removeGrade($id, $conn){
    $sql  = "DELETE FROM semester
-           WHERE semester_id=?";
+           WHERE grade_id=?";
    $stmt = $conn->prepare($sql);
    $re   = $stmt->execute([$id]);
    if ($re) {
@@ -40,3 +40,5 @@ function removeGrade($id, $conn){
     return 0;
    }
 }
+
+?>

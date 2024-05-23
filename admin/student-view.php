@@ -7,7 +7,7 @@ if (isset($_SESSION['admin_id']) &&
        include "../db_connection.php";
        include "data/student.php";
        include "data/subject.php";
-       include "data/grade.php";
+       include "data/semester.php";
        include "data/section.php";
 
        if(isset($_GET['student_id'])){
@@ -42,19 +42,18 @@ if (isset($_SESSION['admin_id']) &&
 
             <li class="list-group-item">Grade: 
                  <?php 
-                      $grade = $student['grade'];
+                      $grade = $student['semester'];
                       $g = getGradeById($grade, $conn);
-                      echo $g['grade_code'].'-'.$g['grade'];
+                      echo $g['semester_code'].'-'.$g['semester'];
                   ?>
             </li>
             <li class="list-group-item">Section: 
                  <?php 
                     $section = $student['section'];
-                    $s = getSectioById($section, $conn);
+                    $s = getSectionById($section, $conn);
                     echo $s['section'];
                   ?>
             </li>
-            <br><br>
             <li class="list-group-item">Parent first name: <?=$student['parent_fname']?></li>
             <li class="list-group-item">Parent last name: <?=$student['parent_lname']?></li>
             <li class="list-group-item">Parent phone number: <?=$student['parent_phone_number']?></li>

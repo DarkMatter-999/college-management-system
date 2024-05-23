@@ -6,7 +6,7 @@ if (isset($_SESSION['admin_id']) &&
     if ($_SESSION['role'] == 'Admin') {
       
        include "../db_connection.php";
-       include "data/grade.php";
+       include "data/semester.php";
        include "data/section.php";
        $grades = getAllGrades($conn);
        $sections = getAllSections($conn);
@@ -143,14 +143,14 @@ if (isset($_SESSION['admin_id']) &&
                  name="parent_phone_number">
         </div><br><hr>
         <div class="mb-3">
-          <label class="form-label">Grade</label>
+          <label class="form-label">Semester</label>
           <div class="row row-cols-5">
             <?php foreach ($grades as $grade): ?>
             <div class="col">
               <input type="radio"
                      name="grade"
-                     value="<?=$grade['grade_id']?>">
-                     <?=$grade['grade_code']?>-<?=$grade['grade']?>
+                     value="<?=$grade['semester_id']?>">
+                     <?=$grade['semester_code']?>-<?=$grade['semester']?>
             </div>
             <?php endforeach ?>
              

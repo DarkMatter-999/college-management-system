@@ -25,7 +25,7 @@ include "./header.php";
                 background-repeat: no-repeat;">
         <div class="textbox">
             <img src="./static/logo.png" alt="Logo">
-            <h1>Welcome to <?= $setting['school_name'] ?></h1>
+            <h1>Welcome to <?= $setting['college_name'] ?></h1>
             <p> <?= $setting['slogan'] ?></p>
         </div>
     </section>
@@ -82,9 +82,9 @@ include "./header.php";
     <div class="content-wrapper">
         <div class="content">
             <div class="contact-info">
-                <p><strong><?= $setting['school_name'] ?></strong></p>
+                <p><strong><?= $setting['college_name'] ?></strong></p>
                 <p class="sqsrte-small">
-                    <?= $setting['school_name'] ?><br> Placeholder Address<br>
+                    <?= $setting['college_name'] ?><br> Placeholder Address<br>
                 </p>
                 <p class="sqsrte-small">
                     Phone Number: Placeholder No.
@@ -96,7 +96,7 @@ include "./header.php";
         </div>
     </div>
     <div class="copy">
-        Copyright &copy; <?= date('Y') ?> <?= $setting['school_name'] ?>. All rights reserved.
+        Copyright &copy; <?= date('Y') ?> <?= $setting['college_name'] ?>. All rights reserved.
     </div>
     </div>
 </body>

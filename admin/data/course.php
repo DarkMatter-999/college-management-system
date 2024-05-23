@@ -29,7 +29,7 @@ function getGradeById($grade_id, $conn){
 }
 
 // DELETE
-function removeGrade($id, $conn){
+function removeCourse($id, $conn){
    $sql  = "DELETE FROM semester
            WHERE semester_id=?";
    $stmt = $conn->prepare($sql);
