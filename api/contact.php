@@ -4,7 +4,7 @@ if (isset($_POST['email']) &&
     isset($_POST['full_name']) &&
     isset($_POST['message'])) {
 
-    include "../DB_connection.php";
+    include "../db_connection.php";
 	
 	$email     = $_POST['email'];
 	$full_name = $_POST['full_name'];
