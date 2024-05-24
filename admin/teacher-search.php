@@ -97,12 +97,12 @@ if (isset($_SESSION['admin_id']) &&
                     <td>
                       <?php 
                            $g = '';
-                           $grades = str_split(trim($teacher['grades']));
+                           $grades = str_split(trim($teacher['semester']));
                            foreach ($grades as $grade) {
                               $g_temp = getGradeById($grade, $conn);
                               if ($g_temp != 0) 
-                                $g .=$g_temp['grade_code'].'-'.
-                                     $g_temp['grade'].', ';
+                                $g .=$g_temp['semester_code'].'-'.
+                                     $g_temp['semester'].', ';
                            }
                            echo $g;
                         ?>

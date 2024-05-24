@@ -167,10 +167,10 @@ if (isset($_SESSION['admin_id']) &&
                      name="classes[]"
                      value="<?=$class['class_id']?>">
                      <?php 
-                        $grade = getGradeById($class['grade'], $conn); 
+                        $grade = getGradeById($class['semester'], $conn); 
                         $section = getSectionById($class['section'], $conn); 
                       ?>
-                     <?=$grade['grade_code']?>-<?=$grade['grade'].$section['section']?>
+                     <?=$grade['semester_code']?>-<?=$grade['semester'].$section['section']?>
             </div>
             <?php endforeach ?>
              

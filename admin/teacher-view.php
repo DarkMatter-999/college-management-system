@@ -64,11 +64,11 @@ if (isset($_SESSION['admin_id']) &&
                      foreach ($classes as $class_id) {
                          $class = getClassById($class_id, $conn);
 
-                        $c_temp = getGradeById($class['grade'], $conn);
-                        $section = getSectioById($class['section'], $conn);
+                        $c_temp = getGradeById($class['semester'], $conn);
+                        $section = getSectionById($class['section'], $conn);
                         if ($c_temp != 0) 
-                          $c .=$c_temp['grade_code'].'-'.
-                               $c_temp['grade'].$section['section'].', ';
+                          $c .=$c_temp['semester_code'].'-'.
+                               $c_temp['semester'].$section['section'].', ';
                      }
                      echo $c;
 

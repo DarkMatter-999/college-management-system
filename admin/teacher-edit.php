@@ -173,8 +173,8 @@ if (isset($_SESSION['admin_id']) &&
               <input type="checkbox"
                      name="classes[]"
                      <?php if($checked) echo "checked"; ?>
-                     value="<?=$grade['grade_id']?>">
-                     <?=$grade['grade_code']?>-<?=$grade['grade']?>
+                     value="<?=$grade['semester_id']?>">
+                     <?=$grade['semester_code']?>-<?=$grade['semester']?>
             </div>
             <?php } ?>
              

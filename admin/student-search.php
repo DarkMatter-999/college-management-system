@@ -80,11 +80,11 @@ if (isset($_SESSION['admin_id']) &&
                     <td><?=$student['username']?></td>
                     <td>
                       <?php 
-                           $grade = $student['grade'];
+                           $grade = $student['semester'];
                            $g_temp = getGradeById($grade, $conn);
                            if ($g_temp != 0) {
-                              echo $g_temp['grade_code'].'-'.
-                                     $g_temp['grade'];
+                              echo $g_temp['semester_code'].'-'.
+                                     $g_temp['semester'];
                             }
                         ?>
                     </td>
@@ -108,14 +108,6 @@ if (isset($_SESSION['admin_id']) &&
               </div>
          <?php } ?>
      </div>
-     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>	
-    <script>
-        $(document).ready(function(){
-             $("#navLinks li:nth-child(3) a").addClass('active');
-        });
-    </script>
-
 </body>
 <?php 
       include "../footer.php";
