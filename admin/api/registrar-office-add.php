@@ -86,7 +86,6 @@ if (isset($_POST['fname']) &&
         header("Location: ../registrar-office-add.php?error=$em&$data");
         exit;
     }else {
-        // hashing the password
         $pass = password_hash($pass, PASSWORD_DEFAULT);
 
         $sql  = "INSERT INTO
@@ -94,8 +93,8 @@ if (isset($_POST['fname']) &&
                  VALUES(?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$uname, $pass, $fname, $lname, $address, $employee_number, $date_of_birth, $phone_number, $qualification, $gender, $email_address]);
-        $sm = "New teacher registered successfully";
-        header("Location: ../teacher-add.php?success=$sm");
+        $sm = "New Office User registered successfully";
+        header("Location: ../registrar-add.php?success=$sm");
         exit;
 	}
     

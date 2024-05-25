@@ -31,7 +31,7 @@ if (isset($_SESSION['admin_id']) &&
         <form method="post"
               class="shadow p-3 mt-5 form-w" 
               action="api/registrar-office-edit.php">
-        <h3>Edit Registraro Office User</h3><hr>
+        <h3>Edit Registrar Office User</h3><hr>
         <?php if (isset($_GET['error'])) { ?>
           <div class="alert alert-danger" role="alert">
            <?=$_GET['error']?>
@@ -124,9 +124,7 @@ if (isset($_SESSION['admin_id']) &&
 
         
 
-      <button type="submit" 
-              class="btn btn-primary">
-              Update</button>
+      <button type="submit" class="btn btn-primary">Update</button>
      </form>
 
      <form method="post"
