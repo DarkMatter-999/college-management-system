@@ -98,7 +98,7 @@ if (isset($_POST['fname']) &&
         // hashing the password
         $pass = password_hash($pass, PASSWORD_DEFAULT);
         $sql  = "INSERT INTO
-                 students(username, password, fname, lname, grade, section, address, gender, email_address, date_of_birth, parent_fname, parent_lname, parent_phone_number)
+                 students(username, password, fname, lname, semester, section, address, gender, email_address, date_of_birth, parent_fname, parent_lname, parent_phone_number)
                  VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$uname, $pass, $fname, $lname, $grade, $section, $address, $gender, $email_address, $date_of_birth, $parent_fname, $parent_lname, $parent_phone_number]);

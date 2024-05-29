@@ -92,7 +92,7 @@ if (isset($_POST['fname'])      &&
         exit;
     }else {
         $sql = "UPDATE students SET
-                username = ?, fname=?, lname=?, grade=?, address=?,gender = ?, section=?, email_address=?, date_of_birth=?, parent_fname=?,parent_lname=?,parent_phone_number=?
+                username = ?, fname=?, lname=?, semester=?, address=?,gender = ?, section=?, email_address=?, date_of_birth=?, parent_fname=?,parent_lname=?,parent_phone_number=?
                 WHERE student_id=?";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$uname,$fname, $lname, $grade, $address, $gender,$section, $email_address, $date_of_birth, $parent_fname, $parent_lname,$parent_phone_number, $student_id]);
