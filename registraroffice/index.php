@@ -12,7 +12,9 @@ if (isset($_SESSION['r_user_id']) &&
 
 
 <body>
-
+<?php
+       include "../nav.php";
+?>
      <div class="container mt-5">
          <div class="container text-center">
              <div class="row row-cols-5">
@@ -34,6 +36,11 @@ if (isset($_SESSION['r_user_id']) &&
              </div>
          </div>
      </div>
+     <script>
+        $(document).ready(function(){
+             $("#navLinks li:nth-child(1) a").addClass('active');
+        });
+    </script>
 
 </body>
 </html>

@@ -183,7 +183,7 @@ if (isset($_SESSION['r_user_id']) &&
      </div>
      <script>
         $(document).ready(function(){
-             $("#navLinks li:nth-child(3) a").addClass('active');
+             $("#navLinks li:nth-child(2) a").addClass('active');
         });
 
         function makePass(length) {

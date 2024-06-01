@@ -4,7 +4,7 @@ if (isset($_SESSION['r_user_id']) &&
     isset($_SESSION['role'])) {
 
     if ($_SESSION['role'] == 'Registrar Office') {
-       include "../DB_connection.php";
+       include "../db_connection.php";
        include "data/student.php";
        include "data/semester.php";
        $students = getAllStudents($conn);
@@ -13,9 +13,10 @@ if (isset($_SESSION['r_user_id']) &&
        include "../header.php";
 ?>
 <body>
-    <?php 
-        if ($students != 0) {
-     ?>
+<?php
+       include "../nav.php";
+       if ($students != 0) {
+?>
      <div class="container mt-5">
         <a href="student-add.php"
            class="btn btn-dark">Add New Student</a>
