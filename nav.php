@@ -94,7 +94,7 @@ if (isset($_SESSION['role'])) {
     </div>
 </nav>
 <?php
-} else if ($_session['role'] == 'Student') {
+} else if ($_SESSION['role'] == 'Student') {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
