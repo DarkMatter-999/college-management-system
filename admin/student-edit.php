@@ -114,11 +114,11 @@ if (isset($_SESSION['admin_id']) &&
           <label class="form-label">Grade</label>
           <div class="row row-cols-5">
             <?php 
-            $grade_ids = str_split(trim($student['grade']));
+            $grade_ids = str_split(trim($student['semester']));
             foreach ($grades as $grade){ 
               $checked =0;
               foreach ($grade_ids as $grade_id ) {
-                if ($grade_id == $grade['grade_id']) {
+                if ($grade_id == $grade['semester_id']) {
                    $checked =1;
                 }
               }
