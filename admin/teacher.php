@@ -129,7 +129,6 @@ if (isset($_SESSION['admin_id']) &&
          <?php } ?>
      </div>
      
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>	
     <script>
         $(document).ready(function(){
              $("#navLinks li:nth-child(2) a").addClass('active');
