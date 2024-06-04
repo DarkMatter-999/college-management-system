@@ -240,7 +240,14 @@ include "../nav.php";
 
     </div>
     <!-- /#wrapper -->
-</body>
+                           
+    <script>
+        $(document).ready(function(){
+             $("#navLinks li:nth-child(1) a").addClass('active');
+        });
+    </script>
+
+  </body>
 
 <?php
 
