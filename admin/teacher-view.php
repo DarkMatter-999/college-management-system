@@ -22,6 +22,7 @@ if (isset($_SESSION['admin_id']) &&
 ?>
 <body>
     <?php 
+        include "../nav.php";
         if ($teacher != 0) {
      ?>
      <div class="container mt-5">
