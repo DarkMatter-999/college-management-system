@@ -94,7 +94,7 @@ if (isset($_POST['fname']) &&
         $stmt = $conn->prepare($sql);
         $stmt->execute([$uname, $pass, $fname, $lname, $address, $employee_number, $date_of_birth, $phone_number, $qualification, $gender, $email_address]);
         $sm = "New Office User registered successfully";
-        header("Location: ../registrar-add.php?success=$sm");
+        header("Location: ../registrar-office-add.php?success=$sm");
         exit;
 	}
     

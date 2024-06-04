@@ -86,6 +86,11 @@ if (isset($_SESSION['admin_id']) &&
               </div>
          <?php } ?>
      </div>
+     <script>
+        $(document).ready(function(){
+             $("#navLinks li:nth-child(8) a").addClass('active');
+        });
+    </script>
 </body>
 <?php
         include "../footer.php";
