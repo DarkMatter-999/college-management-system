@@ -117,19 +117,19 @@ $student_score = getScoreById($student_id, $teacher_id, $ssubject_id, $setting['
             ?>
 
             <div class="input-group mb-3">
-                  <input type="number" min="0" max="100" class="form-control" value="<?=$temp[0]?>"name="score-<?php echo $counter; ?>">
+                  <input type="number" min="0" class="form-control" value="<?=$temp[0]?>"name="score-<?php echo $counter; ?>">
                   <span class="input-group-text">/</span>
-                  <input type="number" min="0" max="100" class="form-control" value="<?=$temp[1]?>"
+                  <input type="number" min="0" class="form-control" value="<?=$temp[1]?>"
                   name="aoutof-<?php echo $counter; ?>">
             </div>  
            <?php } } if($counter <  5){ 
                for ($i=++$counter; $i <= 5; $i++) { 
             ?>
             <div class="input-group mb-3">
-                  <input type="text" class="form-control" value="xx" 
+                  <input type="text" class="form-control" value="" 
                   name="score-<?php echo $i; ?>">
                   <span class="input-group-text">/</span>
-                  <input type="text" class="form-control" value="xx"
+                  <input type="text" class="form-control" value=""
                   name="aoutof-<?php echo $i; ?>">
             </div>
             

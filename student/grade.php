@@ -98,7 +98,7 @@ if (isset($_SESSION['student_id']) &&
             </th>
             <th><?=$total?> / <?=$outOf?></th>
             <th><?php 
-                echo gradeCalc($total);
+                echo gradeCalc($total/$outOf);
                ?></th>
             <th><?=$score['semester']?></th>
           </tr>

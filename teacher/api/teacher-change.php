@@ -10,7 +10,7 @@ if (isset($_POST['old_pass']) &&
     isset($_POST['new_pass'])   &&
     isset($_POST['c_new_pass']) ) {
     
-    include '../../DB_connection.php';
+    include '../../db_connection.php';
     include "../data/student.php";
 
     $old_pass = $_POST['old_pass'];

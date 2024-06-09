@@ -17,30 +17,20 @@ function getScoreById($student_id, $conn){
 
 function gradeCalc($grade){
    $g = "";
-   if ($grade >= 92) {
-       $g = "A+";
-   }else if ($grade >= 86) {
+   if ($grade >= 0.91) {
+       $g = "O";
+   } else if ($grade >= 0.81) {
        $g = "A";
-   }else if ($grade >= 80) {
-       $g = "A-";
-   }else if ($grade >= 75) {
-       $g = "B+";
-   }else if ($grade >= 70) {
+   } else if ($grade >= 0.71) {
        $g = "B";
-   }else if ($grade >= 66) {
-       $g = "B-";
-   }else if ($grade >= 60) {
+   } else if ($grade >= 0.61) {
        $g = "C";
-   }else if ($grade >= 55) {
-       $g = "C-";
-   }else if ($grade >= 50) {
-       $g = "D+";
-   }else if ($grade >= 45) {
+   } else if ($grade >= 0.51) {
        $g = "D";
-   }else if ($grade >= 40) {
-       $g = "D-";
-   }else if ($grade < 39) {
+   } else {
        $g = "F";
    }
    return $g;
 }
+
+?>

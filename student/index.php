@@ -55,7 +55,6 @@ if (isset($_SESSION['student_id']) &&
                     echo $s['section'];
                   ?>
             </li>
-            <br><br>
             <li class="list-group-item">Parent first name: <?=$student['parent_fname']?></li>
             <li class="list-group-item">Parent last name: <?=$student['parent_lname']?></li>
             <li class="list-group-item">Parent phone number: <?=$student['parent_phone_number']?></li>
