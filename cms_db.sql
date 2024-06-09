@@ -156,15 +156,23 @@ CREATE TABLE `setting` (
   `current_semester` varchar(11) NOT NULL,
   `college_name` varchar(100) NOT NULL,
   `slogan` varchar(300) NOT NULL,
-  `about` text NOT NULL
+  `about` text NOT NULL,
+  `contact` varchar(100) NOT NULL,
+  `address` text NOT NULL,
+  `course1` text NOT NULL,
+  `course1desc` text NOT NULL,
+  `course2` text NOT NULL,
+  `course2desc` text NOT NULL,
+  `course3` text NOT NULL,
+  `course3desc` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `setting`
 --
 
-INSERT INTO `setting` (`id`, `current_year`, `current_semester`, `college_name`, `slogan`, `about`) VALUES
-(1, 2024, 'III', 'Generic College', 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.', 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.');
+INSERT INTO `setting` (`id`, `current_year`, `current_semester`, `college_name`, `slogan`, `about`, `contact`, `address`, `course1`, `course1desc`, `course2`, `course2desc`, `course3`, `course3desc`) VALUES
+(1, 2024, 'I', 'College Name', 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.', 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.', '+91-1234567890', 'college address, city, state', 'BTech', 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.', 'BTech', 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.', 'BTech', 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.');
 
 -- --------------------------------------------------------
 

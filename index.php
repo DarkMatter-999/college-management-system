@@ -16,7 +16,7 @@ include "./header.php";
         </ul>
         <a href="login.php" class="login-button">Login</a>
     </nav>
-    <section style="min-height: 92vh;
+    <section style="min-height: calc(100vh - 60px);
                 width: 100%;
                 background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
                                   url('./static/uni.jpg');
@@ -29,28 +29,28 @@ include "./header.php";
             <p> <?= $setting['slogan'] ?></p>
         </div>
     </section>
-    <section id="about">
-        <h2>About Us</h2>
+    <section id="about" style="height: 100vh;">
+        <h2 style="padding: 40px 0 20px 0;">About Us</h2>
         <p><?= $setting['about'] ?></p>
         <div class="row">
             <div class="course-col">
-                <h5>CSE</h5>
-                <img class="imge" src="./static/logo.png" alt="Logo">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, deleniti eaque omnis dolores molestiae enim harum! Placeat libero eum amet perferendis tempore. Ipsam soluta ut officiis atque laborum veritatis voluptatum!</p>
+            <h5><?= $setting['course1'] ?></h5>
+                <img class="imge" src="./static/course1.png" alt="Logo">
+                <p><?= $setting['course1desc'] ?></p>
             </div>
             <div class="course-col">
-                <h5>ME</h5>
-                <img class="imge" src="./static/logo.png" alt="Logo">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, deleniti eaque omnis dolores molestiae enim harum! Placeat libero eum amet perferendis tempore. Ipsam soluta ut officiis atque laborum veritatis voluptatum!</p>
+            <h5><?= $setting['course2'] ?></h5>
+                <img class="imge" src="./static/course2.png" alt="Logo">
+                <p><?= $setting['course2desc'] ?></p>
             </div>
             <div class="course-col">
-                <h5>EE</h5>
-                <img class="imge" src="./static/logo.png" alt="Logo">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, deleniti eaque omnis dolores molestiae enim harum! Placeat libero eum amet perferendis tempore. Ipsam soluta ut officiis atque laborum veritatis voluptatum!</p>
+            <h5><?= $setting['course2'] ?></h5>
+                <img class="imge" src="./static/course3.png" alt="Logo">
+                <p><?= $setting['course2desc']?></p>
             </div>
         </div>
     </section>
-    <section id="contact" class="d-flex justify-content-center align-items-center flex-column">
+    <section id="contact" class="d-flex justify-content-center align-items-center flex-column" style="height: 80vh;">
         <form method="post" action="api/contact.php">
             <h2>Contact Us</h2>
             <?php if (isset($_GET['error'])) { ?>
@@ -84,13 +84,10 @@ include "./header.php";
             <div class="contact-info">
                 <p><strong><?= $setting['college_name'] ?></strong></p>
                 <p class="sqsrte-small">
-                    <?= $setting['college_name'] ?><br> Placeholder Address<br>
+                    Address: <?= $setting['college_name'] ?>,<br><?= $setting['address'] ?><br>
                 </p>
                 <p class="sqsrte-small">
-                    Phone Number: Placeholder No.
-                </p>
-                <p class="sqsrte-small">
-                    Email: <a href="">Placeholder Email</a>
+                Phone Number: <?= $setting['contact'] ?>
                 </p>
             </div>
         </div>

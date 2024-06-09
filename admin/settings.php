@@ -64,6 +64,48 @@ include "../nav.php";
                  value="<?=$setting['current_semester']?>"
                  name="current_semester">
         </div>
+        <div class="mb-3">
+          <label class="form-label">Contact</label>
+          <input type="text" 
+                 class="form-control"
+                 value="<?=$setting['contact']?>" 
+                 name="contact">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Address</label>
+          <textarea class="form-control" name="address"
+                    rows="4"><?=$setting['address']?></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Course 1</label>
+          <textarea class="form-control" name="course1"
+                    rows="2"><?=$setting['course1']?></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Course 1 Description</label>
+          <textarea class="form-control" name="course1desc"
+                    rows="4"><?=$setting['course1desc']?></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Course 2</label>
+          <textarea class="form-control" name="course2"
+                    rows="2"><?=$setting['course2']?></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Course 2 Description</label>
+          <textarea class="form-control" name="course2desc"
+                    rows="4"><?=$setting['course2desc']?></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Course 3</label>
+          <textarea class="form-control" name="course3"
+                    rows="2"><?=$setting['course3']?></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Course 3 Description</label>
+          <textarea class="form-control" name="course3desc"
+                    rows="4"><?=$setting['course3desc']?></textarea>
+        </div>
       <button type="submit" 
               class="btn btn-primary">
               Update</button>
